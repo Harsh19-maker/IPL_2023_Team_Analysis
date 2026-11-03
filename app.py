@@ -22,8 +22,12 @@ with tab1:
     c.metric("Top team", teams.loc[teams.Points.idxmax(), "Team"])
     st.dataframe(teams.sort_values(["Points","Net_Run_Rate"], ascending=False), use_container_width=True, hide_index=True)
     st.plotly_chart(px.bar(teams.sort_values("Points"), x="Points", y="Team", orientation="h", title="Points by team"), use_container_width=True)
-    wins = teams.melt(id_vars="Team", value_vars=["Won","Lost"], var_name="Result", value_name="Matches")
-    st.plotly_chart(px.bar(wins, x="Team", y="Matches", color="Result", barmode="group", title="Wins and losses"), use_container_width=True)
+    # Plot wins and losses directly; avoids pandas melt compatibility issues.
+    st.plotly_chart(
+        px.bar(teams, x="Team", y=["Won", "Lost"], barmode="group",
+               title="Matches won and lost", labels={"value": "Matches", "variable": "Result"}),
+        use_container_width=True
+    )
 
 with tab2:
     st.dataframe(batters.sort_values("Runs", ascending=False), use_container_width=True, hide_index=True)
