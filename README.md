@@ -15,7 +15,7 @@ streamlit run app.py
 ```
 
 ## Data scope and limitations
-This is a reconstructed educational portfolio project. Team standings are season-level summary data. Batting and bowling files contain selected leaderboard records, not every player or ball-by-ball delivery. The app does not claim toss-wise, venue-wise or match-by-match analysis because those records are not included. Verify figures against a consistent official or reputable data source before formal publication.
+This is a educational portfolio project. Team standings are season-level summary data. Batting and bowling files contain selected leaderboard records, not every player or ball-by-ball delivery. The app does not claim toss-wise, venue-wise or match-by-match analysis because those records are not included. Verify figures against a consistent official or reputable data source before formal publication.
 
 ## References
 - IPL official website: https://www.iplt20.com/
