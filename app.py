@@ -11,7 +11,7 @@ bowlers = pd.read_csv(DATA / "top_bowlers.csv")
 
 st.title("🏏 IPL 2023 — Team & Player Analysis")
 st.caption("Python • Pandas • Plotly • Streamlit")
-st.info("Reconstructed educational dashboard. See README.md for data scope and limitations.")
+st.info(" Educational dashboard. See README.md for data scope and limitations.")
 
 tab1, tab2, tab3, tab4 = st.tabs(["🏆 Team Standings", "🏏 Batting", "🎯 Bowling", "📊 Insights & Data"])
 
